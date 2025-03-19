@@ -8,27 +8,29 @@
     .oneProgram, .onlyText {
         display: flex;
         flex-direction: column-reverse;
-        margin: 30px;
-        border-radius: 10%;
+        margin: 15px;
+        border-radius: 30px;
         align-items: center;
         justify-content: center;
         transition: 200ms ease-in-out;
         background-color: rgb(255, 200, 221);
+        height: 40rem;
 
         .text {
-            display: flex;
             flex-direction: column;
+
+            /*heres the width problem with resources*/
             width:350px;
-            font-size: larger;
-            border-radius: 25%;
-            padding:5%;
+           
+            padding: 0 5%;
             text-align: center;
             p {
                 color: #07020D;
                 font-family: "DynaPuff";
-                line-height: 50px;
-                font-weight: lighter;
-                font-size: larger;
+                line-height: 25px;
+                padding: 0 2vw;
+                /* font-weight: lighter;
+                font-size: larger; */
             }
         }
 
@@ -44,8 +46,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            gap:10px;
+            align-items:start;
+            /* gap:100px; */
             
             button {
                 background-color: #ffffff;
@@ -88,37 +90,36 @@
         
     }
     .oneProgram:nth-child(even), .clickedOneProgram:nth-child(even) {
-        background-color: #CDB4DB;
+        background-color: #FFC7DC;
     }
 
 }
 
 .links button:hover, .bookmarks button:hover {
-    scale: 1.1;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    scale: 1.02;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);
 }
 
 .oneProgram:hover {
     background-color: #A2D2FF;
-    scale: 1.05;
-    border-radius: 5%;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    /* scale: 1.02; */
+    border-radius: 30px;
+    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
 }
 .oneProgram:nth-child(even):hover {
     background-color: #A2D2FF;
-    scale: 1.05;
-    border-radius: 5%;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    /* scale: 1.02; */
+    border-radius: 30px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);
 }
 
 
 .uniqueTitle {
     width: 100%;
-    padding-top: 20%;
-    padding-bottom: 20%;
     display:flex;
     justify-content: center;
     align-items: center;
+    padding: 5% 20px;
 
     background-image: url(../public/imgs/familyOutdoors.jpg);
     background-attachment: fixed;
@@ -128,28 +129,46 @@
     color: white;
     text-shadow: 0 0 15px rgb(0, 0, 0);
     text-align: center;
-    font-size: min(13vw, 120px);
+
+    font-size: 60px;
+
 }
 
 .splitResources .onlyText {
     width:90%;
     max-width: 90%;
-    margin-left: 5%;
     
+    font-size: 2vw;
 
     .text{
-        
         width:90%;
-        font-size: min(9vw, 36px);
+        
         p{
             line-height:normal;
             font-family: 'Times New Roman', Times, serif;
             transition: 400ms ease-in-out;        
-            border-radius: 20px;
         }
     }
 
-    .text p:hover{
-        scale: 1.05;
+   
+
+}
+@media screen and (max-width: 500px){
+  
+    .uniqueTitle {
+        font-size: 12vw;
+        padding: 10% 20px;
+        /* padding-top: 10%;
+        padding-bottom: 20%; */
     }
+
+    .splitResources .onlyText {
+        font-size: 4vw;
+
+    }
+
+    
+
+
+
 }
