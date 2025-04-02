@@ -16,7 +16,7 @@
    h1 {
      margin:min(15vw, 60px);
      text-align: center;
-     color: black;
+     color: var(--standardBlack);
      font-size: 75px;
      align-self: center;
      justify-self: center;
@@ -42,7 +42,7 @@
     img {
       height: 12vw;
       max-height: 80px;
-      background-image: linear-gradient(45deg, #FFAFCC,#A2D2FF);
+      background-image: linear-gradient(45deg, var(--lightPink), var(--lightBlue));
       border-radius: 50%;
       transition: 150ms ease-in-out;
     }
