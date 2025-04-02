@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
     .oneProgram, .onlyText {
         display: flex;
         flex-direction: column-reverse;
@@ -16,13 +17,15 @@
         transition: 200ms ease-in-out;
         background-color: rgb(255, 200, 221);
 
+        /* Media query for max-width? Some cards look giant on mobile. */
+
         .text {
             flex-direction: column;
 
             /*heres the width problem with resources*/
-            width:350px;
+            width: 350px;
            
-            padding: 0 5%;
+            /* Extraneous padding - padding: 0 5%; */
             text-align: center;
             p {
                 color: #07020D;
@@ -47,18 +50,21 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items:start;
+            
             /* gap:100px; */
             
             button {
                 background-color: #ffffff;
                 min-height: 50px;
-                margin: 5% 15%;
+                margin: 5px;
+                max-width: 200px;
                 padding:10px;
                 border-radius: 8px;
                 font-weight: bold;
                 font-size: large;
                 font-family: 'Times New Roman', Times, serif;
-                transition: 150ms ease-in-out;                
+                transition: 150ms ease-in-out;   
+                border-width: 0px;          
             }
         }
 
