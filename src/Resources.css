@@ -15,7 +15,7 @@
         align-items: center;
         justify-content: center;
         transition: 200ms ease-in-out;
-        background-color: rgb(255, 200, 221);
+        background-color: var(--lightPink);
 
         /* Media query for max-width? Some cards look giant on mobile. */
 
@@ -28,7 +28,7 @@
             /* Extraneous padding - padding: 0 5%; */
             text-align: center;
             p {
-                color: #07020D;
+                color: var(--standardBlack);
                 font-family: "DynaPuff";
                 line-height: 25px;
                 padding: 0 2vw;
@@ -54,7 +54,7 @@
             /* gap:100px; */
             
             button {
-                background-color: #ffffff;
+                background-color: var(--white);
                 min-height: 50px;
                 margin: 5px;
                 max-width: 200px;
@@ -82,7 +82,7 @@
                 align-items: center;
                 justify-content: center;
 
-                background-color: #FDFD96;                
+                background-color: var(--yellow);                
             }
             img{
                 width: 20px;
@@ -96,7 +96,7 @@
         
     }
     .oneProgram:nth-child(even), .clickedOneProgram:nth-child(even) {
-        background-color: #FFC7DC;
+        background-color: var(--lightBlue);
     }
 
 }
@@ -107,13 +107,13 @@
 }
 
 .oneProgram:hover {
-    background-color: #A2D2FF;
+    background-color: var(--lightBlue);
     /* scale: 1.02; */
     border-radius: 30px;
     /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
 }
 .oneProgram:nth-child(even):hover {
-    background-color: #A2D2FF;
+    background-color: var(--lightPink);
     /* scale: 1.02; */
     border-radius: 30px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);
@@ -132,8 +132,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: white;
-    text-shadow: 0 0 15px rgb(0, 0, 0);
+    color: var(--white);
+    text-shadow: 0 0 15px var(--standardBlack);
     text-align: center;
 
     font-size: 60px;
@@ -167,14 +167,7 @@
         /* padding-top: 10%;
         padding-bottom: 20%; */
     }
-
     .splitResources .onlyText {
         font-size: 4vw;
-
     }
-
-    
-
-
-
 }
