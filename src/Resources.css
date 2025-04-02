@@ -8,13 +8,13 @@
     .oneProgram, .onlyText {
         display: flex;
         flex-direction: column-reverse;
-        margin: 15px;
+        margin: 25px;
+        padding: 10px;
         border-radius: 30px;
         align-items: center;
         justify-content: center;
         transition: 200ms ease-in-out;
         background-color: rgb(255, 200, 221);
-        height: 40rem;
 
         .text {
             flex-direction: column;
