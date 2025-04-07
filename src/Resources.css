@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    /* width:100%; */
 
     .oneProgram, .onlyText {
         display: flex;
@@ -13,9 +14,10 @@
         padding: 10px;
         border-radius: 30px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         transition: 200ms ease-in-out;
         background-color: var(--lightPink);
+        /* align-content: space-between; */
 
         /* Media query for max-width? Some cards look giant on mobile. */
 
@@ -45,7 +47,7 @@
 
         }
 
-        .links, .bookmarks {
+        .links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -170,4 +172,15 @@
     .splitResources .onlyText {
         font-size: 4vw;
     }
+}
+
+
+.cardContainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    
+
+
 }

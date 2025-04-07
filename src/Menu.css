@@ -1,6 +1,6 @@
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 0px;
     position: fixed; 
     z-index: 1; 
     top: 0; 
@@ -76,5 +76,10 @@
     bottom: 80px;
     font-weight: bolder;
     font-size: 40px;
+  }
+
+  .mySidenav{
+    width: 0px;
+
   }
   

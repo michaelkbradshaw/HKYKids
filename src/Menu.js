@@ -5,6 +5,10 @@ import './Menu.css';
 function Menu(){
 
     function toggleNav() {
+      console.log(document.getElementById("mySidenav").style);
+      if (!document.getElementById("mySidenav").style.width){
+        document.getElementById("mySidenav").style.width = "0px";
+      }
       if(document.getElementById("mySidenav").style.width == "0px"){
         document.getElementById("mySidenav").style.width = "250px";
       } else {
@@ -37,7 +41,7 @@ function Menu(){
 
         
         </div>
-      
+        
         <span onClick={toggleNav} className="menuButton">≡</span>
       </>
     )
