@@ -10,6 +10,7 @@
     .oneProgram, .onlyText {
         display: flex;
         flex-direction: column-reverse;
+        max-width:75%;
         margin: 25px;
         padding: 10px;
         border-radius: 30px;
@@ -173,8 +174,23 @@
     .splitResources .onlyText {
         font-size: 4vw;
     }
-    .splitResources {
-        /*somethin*/
+
+    .splitResources .oneProgram {
+        margin: 15px;
+        padding: 5px;
+        .links {
+            max-width: none;
+            button {
+                max-width: 125px;
+            }
+        }
+        .text {
+            width: 75%;
+        }
+        img {
+            height: 50vw;
+            width: 50vw;
+        }
     }
 }
 
@@ -184,7 +200,5 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    
-
-
+    width: 100%;
 }
