@@ -1,11 +1,15 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import {Link, useParams} from "react-router-dom";
 import './Menu.css';
 
 function Menu(){
 
+    const [buttonColor, setButtonColor] = useState('#AA7589');
+
     function toggleNav() {
       console.log(document.getElementById("mySidenav").style);
+      setButtonColor(buttonColor === '#AA7589' ? '#FFC7DC' : '#AA7589');
+      
       if (!document.getElementById("mySidenav").style.width){
         document.getElementById("mySidenav").style.width = "0px";
       }
@@ -42,7 +46,7 @@ function Menu(){
         
         </div>
         
-        <span onClick={toggleNav} className="menuButton">≡</span>
+        <span onClick={toggleNav} className="menuButton" style={{ color: buttonColor}}>≡</span>
       </>
     )
 }

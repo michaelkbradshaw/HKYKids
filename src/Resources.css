@@ -49,6 +49,7 @@
 
         .links {
             display: flex;
+            max-width: 55%;
             flex-wrap: wrap;
             justify-content: center;
             align-items:start;
