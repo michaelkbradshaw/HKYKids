@@ -67,6 +67,7 @@
     scale: 1.1;
     /* background-color: ; */
     color:var(--lightBlue);
+    cursor: pointer;
     /* box-shadow: 5px 3px 3px 3px black; */
   }
 

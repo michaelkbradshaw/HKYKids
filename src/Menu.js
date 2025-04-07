@@ -3,18 +3,21 @@ import {Link, useParams} from "react-router-dom";
 import './Menu.css';
 
 function Menu(){
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
 
+    function toggleNav() {
+      if(document.getElementById("mySidenav").style.width == "0px"){
+        document.getElementById("mySidenav").style.width = "250px";
+      } else {
+        document.getElementById("mySidenav").style.width = "0px";
       }
+
+    }
+    
       
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
     return(
         <>
         <div id="mySidenav" className="sidenav">
-            <Link className="closebtn" onClick={closeNav}>≡</Link>
+            {/* <Link className="closebtn" onClick={toggleNav}>≡</Link> */}
             
             <Link to="/" className="menuHome">{window.location.pathname === "/" ? "→ Home" : "Home"}</Link>
             
@@ -35,7 +38,7 @@ function Menu(){
         
         </div>
       
-        <span onClick={openNav} className="menuButton">≡</span>
+        <span onClick={toggleNav} className="menuButton">≡</span>
       </>
     )
 }
