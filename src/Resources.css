@@ -17,7 +17,7 @@
         justify-content: flex-end;
         transition: 200ms ease-in-out;
         background-color: var(--lightPink);
-        /* align-content: space-between; */
+        align-content: space-between;
 
         /* Media query for max-width? Some cards look giant on mobile. */
 
@@ -49,10 +49,10 @@
 
         .links {
             display: flex;
-            max-width: 55%;
             flex-wrap: wrap;
             justify-content: center;
-            align-items:start;
+            align-items: center;
+            max-width:55%;
             
             /* gap:100px; */
             
@@ -172,6 +172,9 @@
     }
     .splitResources .onlyText {
         font-size: 4vw;
+    }
+    .splitResources {
+        /*somethin*/
     }
 }
 
