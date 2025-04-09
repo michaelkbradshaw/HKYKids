@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .splitResources {
     display: flex;
@@ -29,7 +29,7 @@
             text-align: center;
             p {
                 color: var(--standardBlack);
-                font-family: "DynaPuff";
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 line-height: 25px;
                 padding: 0 5vw;
                 /* font-weight: lighter;
@@ -62,8 +62,7 @@
                 padding:10px;
                 border-radius: 8px;
                 font-weight: bold;
-                font-size: large;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 transition: 150ms ease-in-out;   
                 border-width: 0px;          
             }
@@ -137,6 +136,7 @@
     text-shadow: 0 0 15px var(--standardBlack);
     text-align: center;
 
+    font-family: "Pacifico";
     font-size: 40px;
 
 }
@@ -152,7 +152,7 @@
         
         p{
             line-height:normal;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             transition: 400ms ease-in-out;        
         }
     }

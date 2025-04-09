@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 
 .Header {
@@ -21,7 +21,7 @@
      align-self: center;
      justify-self: center;
      /* padding:5%; */
-     font-family: "Leckerli One";
+     font-family: "Pacifico";
    }
    .topBar {
      .logoLink {
