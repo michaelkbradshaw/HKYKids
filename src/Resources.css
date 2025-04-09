@@ -125,9 +125,9 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    padding: 2% 20px;
+    padding: 3% 20px;
 
-    background-image: url(../public/imgs/familyOutdoors.jpg);
+    background-image: url(https://i.imgur.com/sNbZi4g.png); /* Hosting this on Imgur for now - more secure host later */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
