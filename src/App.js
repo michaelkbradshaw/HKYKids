@@ -63,7 +63,7 @@ function App() {
 
         <Route path ="/page/:programId" element = {<RouterPage data = {kykidsData} headerText= "More" />} />
 
-        <Route path ="/test/" element = {<RouterPage data = {kykidsData} headerText= "More" />} />
+        <Route path ="/test/" element = {<RouterPage data = {kykidsData} />} />
         
 
         <Route path ="*" element ={<Header name="Page Not Found" />} />

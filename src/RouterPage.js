@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Link, useParams }
     from "react-router-dom"; import './Resources.css'
-import Header from './Header.js';
+//import Header from './Header.js'; <Header name={programId} />
 
-/* props.data, props.sectionIds, props.headerText*/
+/* props.data */
 
 function RouterPage(props) {
-    //console.log("props.data", props.data);
-
-    //let uniqueTitles = []
 
     const { programId } = useParams();
     console.log("ProgramID", programId);
 
     return (
         <div className="moreInfoPage">
-            <Header name={programId} />
+            
             <div className="splitResources">
                 <>
                     {props.data
