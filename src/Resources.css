@@ -9,7 +9,7 @@
     .oneProgram, .onlyText {
         display: flex;
         flex-direction: column-reverse;
-        max-width: 50%; 
+        max-width: 350px; 
         margin: 25px;
         padding: 10px;
         border-radius: 30px;
@@ -23,7 +23,6 @@
             flex-direction: column;
 
             /*heres the width problem with resources*/
-            width: 350px;
            
             /* Extraneous padding - padding: 0 5%; */
             text-align: center;
@@ -145,7 +144,7 @@
     width:90%;
     max-width: 90%;
     
-    font-size: 2vw;
+    /* font-size: 2vw; */
 
     .text{
         width:90%;
