@@ -335,10 +335,10 @@
     },
     {
       "sectionId": "childcare",
-      "sectionTitle": "Why is a high-quality early learning program important?",
+      "sectionTitle": "High-quality early learning programs",
       "gid": "whyChildcare",
       "logo": "imgs/lookFor.png",
-      "title": "Why is a high-quality early learning program important?",
+      "title": "High-quality early learning programs",
       "links": [
         {
           "link": "https://www.childcareawareky.org/wp-content/uploads/2020/04/Examples-of-what-to-look-for-in-Child-Care-setting_3.16.20.pdf",
@@ -351,7 +351,7 @@
     },
     {
       "sectionId": "childcare",
-      "sectionTitle": "Why is a high-quality early learning program important?",
+      "sectionTitle": "High-quality early learning programs",
       "gid": "choseChildcare",
       "logo": "imgs/cropped-Child-Care-Aware-of-Kentucky-1.gif",
       "title": "Need help choosing the right care for your child?",
@@ -361,7 +361,7 @@
     },
     {
       "sectionId": "childcare",
-      "sectionTitle": "Why is a high-quality early learning program important?",
+      "sectionTitle": "High-quality early learning programs",
       "gid": "childcareBenefits",
       "logo": "imgs/kynectBenefitsLogoRGB.png",
       "title": "Are you eligible for help covering the cost of childcare?",
