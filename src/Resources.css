@@ -9,7 +9,7 @@
     .oneProgram, .onlyText {
         display: flex;
         flex-direction: column-reverse;
-        max-width: 350px; 
+        max-width: 350px;
         margin: 25px;
         padding: 10px;
         border-radius: 30px;

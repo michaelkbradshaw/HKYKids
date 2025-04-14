@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
 
+
 /* props.data, props.sectionIds, props.headerText*/
 
 function Resources(props) {
@@ -60,11 +61,11 @@ function Resources(props) {
                                                 
                                                 <div className="oneProgram">
                                                     
-                                                    
-                                                    {Object.hasOwn(filteredItem, 'links') ?
+                                                    {/* Commented out links, will move to router page */}
+                                                    {/* {Object.hasOwn(filteredItem, 'links') ?
                                                         <span className="links">
                                                             {filteredItem.links.map((link) => <a href={link.link}><button target="_blank">{link.text}</button></a>)}
-                                                        </span> : null}
+                                                        </span> : null} */}
                                                     {Object.hasOwn(filteredItem, 'description') && filteredItem.description != "" ?
                                                         <span className="text">
                                                             {filteredItem.description.map((desc) => (<p>{desc}</p>))}
@@ -73,8 +74,11 @@ function Resources(props) {
                                                     {Object.hasOwn(filteredItem, 'logo') ?
                                                         <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
                                                         : null}
-                                                    <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
-
+                                                    {Object.hasOwn(filteredItem, 'links') ?
+                                                        <span className="siteLink">
+                                                            {<a href={filteredItem.links[0].link}><button target="_blank">{/* share image */}</button></a>}
+                                                        </span> : null}
+                                                        <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
 
                                                 </div>
                                                 :
