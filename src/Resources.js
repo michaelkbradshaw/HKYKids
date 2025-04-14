@@ -5,7 +5,9 @@ import Header from './Header.js';
 /* props.data, props.sectionIds, props.headerText*/
 
 function Resources(props) {
+
     let uniqueTitles = []
+    console.log("props.data", props.data);
 
     const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
     const [ids, setIds] = useState(storedIds)
@@ -42,6 +44,7 @@ function Resources(props) {
 
 
     console.log("uniqueTitles", uniqueTitles)
+    console.log("props", props.data)
 
     return (
         <div className="Resources">
