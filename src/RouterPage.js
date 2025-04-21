@@ -41,7 +41,7 @@ function RouterPage(props) {
                                                     <span className="routerLink">
                                                         <a href={"#/page/" + filteredItem.gid}><button target="_blank">{/* info image*/}</button></a>
                                                     </span>
-                                                        <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
+                                                        {/*<span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>*/}
 
                                                 </div>
 
