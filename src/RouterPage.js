@@ -19,15 +19,16 @@ function RouterPage(props) {
                         .filter((item) => item.gid === programId)
                         .map((filteredItem) => (
                             <>
-                                <div className="oneProgram">
-                                    {Object.hasOwn(filteredItem, 'links') ?
-                                        <span className="links">
-                                            {filteredItem.links.map((link) => <a href={link.link}><button target="_blank">{link.text}</button></a>)}
-                                        </span> : null}
-                                    {Object.hasOwn(filteredItem, 'description') && filteredItem.description != "" ?
-                                        <span className="text">
-                                            {filteredItem.description.map((desc) => (<p>{desc}</p>))}
-                                        </span> : null}
+                                            <div className="oneProgram">
+                                                    
+                                                    {Object.hasOwn(filteredItem, 'links') ?
+                                                        <span className="links">
+                                                            {filteredItem.links.map((link) => <a href={link.link}><button target="_blank">{link.text}</button></a>)}
+                                                        </span> : null}
+                                                    {Object.hasOwn(filteredItem, 'description') && filteredItem.description != "" ?
+                                                        <span className="text">
+                                                            {filteredItem.description.map((desc) => (<p>{desc}</p>))}
+                                                        </span> : null}
 
                                                     {Object.hasOwn(filteredItem, 'logo') ?
                                                         <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
@@ -43,14 +44,6 @@ function RouterPage(props) {
                                                         <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
 
                                                 </div>
-                                    {Object.hasOwn(filteredItem, 'logo') ?
-                                        <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
-                                        : null}
-                                    {Object.hasOwn(filteredItem, 'moreText') && filteredItem.moreText != "" ?
-                                        <span className="moreText">
-                                            {filteredItem.moreText.map((text) => (<p>{text}</p>))}
-                                        </span> : null}
-                                </div>
 
                             </>
                         ))
