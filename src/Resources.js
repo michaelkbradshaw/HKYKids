@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfo } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 /* props.data, props.sectionIds, props.headerText*/
 
@@ -77,13 +79,15 @@ function Resources(props) {
                                                     {Object.hasOwn(filteredItem, 'logo') ?
                                                         <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
                                                         : null}
+                                                    <span className="links">
                                                     {Object.hasOwn(filteredItem, 'links') ?
                                                         <span className="siteLink">
-                                                            {<a href={filteredItem.links[0].link}><button target="_blank">{/* share image */}</button></a>}
+                                                            {<a href={filteredItem.links[0].link}><button target="_blank">{<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}</button></a>}
                                                         </span> : null}
                                                         
-                                                    <span className="routerLink">
-                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{/* info image*/}</button></a>
+                                                    <span className="shareLink">
+                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{<FontAwesomeIcon icon={faInfo} />}</button></a>
+                                                    </span>
                                                     </span>
                                                         <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
 
