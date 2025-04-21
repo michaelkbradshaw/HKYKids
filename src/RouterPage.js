@@ -35,7 +35,7 @@ function RouterPage(props) {
                                                         : null}
                                                     {Object.hasOwn(filteredItem, 'links') ?
                                                         <span className="siteLink">
-                                                            {<a href={filteredItem.links[gi0].link}><button target="_blank">{/* share image */}</button></a>}
+                                                            {<a href={filteredItem.links[0].link}><button target="_blank">{/* share image */}</button></a>}
                                                         </span> : null}
                                                         
                                                     <span className="routerLink">
