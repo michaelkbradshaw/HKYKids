@@ -4,6 +4,7 @@ import Header from './Header.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 
 /* props.data, props.sectionIds, props.headerText*/
 
@@ -75,7 +76,7 @@ function Resources(props) {
                                                         <span className="text">
                                                             {filteredItem.description.map((desc) => (<p>{desc}</p>))}
                                                         </span> : null}
-
+                                                    <div className="logoLinks">  
                                                     {Object.hasOwn(filteredItem, 'logo') ?
                                                         <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
                                                         : null}
@@ -88,9 +89,9 @@ function Resources(props) {
                                                     <span className="shareLink">
                                                         <a href={"#/page/" + filteredItem.gid}><button target="_blank">{<FontAwesomeIcon icon={faInfo} />}</button></a>
                                                     </span>
+                                                    <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}>{<FontAwesomeIcon icon={faBookmark} />}</button></span>
                                                     </span>
-                                                        <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
-
+                                                    </div> 
                                                 </div>
                                                 :
                                                 <div className="onlyText">
