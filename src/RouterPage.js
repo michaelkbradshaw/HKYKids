@@ -29,6 +29,20 @@ function RouterPage(props) {
                                             {filteredItem.description.map((desc) => (<p>{desc}</p>))}
                                         </span> : null}
 
+                                                    {Object.hasOwn(filteredItem, 'logo') ?
+                                                        <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
+                                                        : null}
+                                                    {Object.hasOwn(filteredItem, 'links') ?
+                                                        <span className="siteLink">
+                                                            {<a href={filteredItem.links[0].link}><button target="_blank">{/* share image */}</button></a>}
+                                                        </span> : null}
+                                                        
+                                                    <span className="routerLink">
+                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{/* info image*/}</button></a>
+                                                    </span>
+                                                        <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}><img src="../imgs/bookmark.png"/></button></span>
+
+                                                </div>
                                     {Object.hasOwn(filteredItem, 'logo') ?
                                         <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
                                         : null}
