@@ -80,13 +80,13 @@ function Resources(props) {
                                                     <span className="links">
                                                     {Object.hasOwn(filteredItem, 'links') ?
                                                         <span className="siteLink">
-                                                            {<a href={filteredItem.links[0].link}><button target="_blank"><img src = '../imgs/newPageButton.svg'></img></button></a>}
+                                                            {<a href={filteredItem.links[0].link}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/newPageButton.svg'></img></button></a>}
                                                         </span> : null}
                                                         
                                                     <span className="shareLink">
-                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{<img src = '../imgs/infoButton.svg'></img>}</button></a>
+                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{<img className = "smallButtonSVG" src = '../imgs/infoButton.svg'></img>}</button></a>
                                                     </span>
-                                                    <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}>{<img src = '../imgs/bookmarkButton.svg'></img>}</button></span>
+                                                    <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}>{<img className = "smallButtonSVG" src = '../imgs/bookmarkButton.svg'></img>}</button></span>
                                                     </span>
                                                     </div> 
                                                 </div>
