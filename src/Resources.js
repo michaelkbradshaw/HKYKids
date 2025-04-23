@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfo } from "@fortawesome/free-solid-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { faBookmark } from '@fortawesome/free-regular-svg-icons';
+
 
 /* props.data, props.sectionIds, props.headerText*/
 
@@ -83,13 +80,13 @@ function Resources(props) {
                                                     <span className="links">
                                                     {Object.hasOwn(filteredItem, 'links') ?
                                                         <span className="siteLink">
-                                                            {<a href={filteredItem.links[0].link}><button target="_blank">{<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}</button></a>}
+                                                            {<a href={filteredItem.links[0].link}><button target="_blank"><img src = '../imgs/newPageButton.svg'></img></button></a>}
                                                         </span> : null}
                                                         
                                                     <span className="shareLink">
-                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{<FontAwesomeIcon icon={faInfo} />}</button></a>
+                                                        <a href={"#/page/" + filteredItem.gid}><button target="_blank">{<img src = '../imgs/infoButton.svg'></img>}</button></a>
                                                     </span>
-                                                    <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}>{<FontAwesomeIcon icon={faBookmark} />}</button></span>
+                                                    <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}>{<img src = '../imgs/bookmarkButton.svg'></img>}</button></span>
                                                     </span>
                                                     </div> 
                                                 </div>
