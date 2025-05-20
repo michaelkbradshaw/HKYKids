@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 
-    .oneProgram, .onlyText {
+    .resource, .onlyText {
         display: flex;
         flex-direction: column-reverse;
         max-width: 350px;
@@ -87,7 +87,7 @@
         }
         
     }
-    .oneProgram:nth-child(even), .clickedOneProgram:nth-child(even) {
+    .resource:nth-child(even) {
         background-color: var(--lightBlue);
     }
 
@@ -98,13 +98,13 @@
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);
 }
 
-.oneProgram:hover {
+.resoruce:hover {
     background-color: var(--lightBlue);
     /* scale: 1.02; */
     border-radius: 30px;
     /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
 }
-.oneProgram:nth-child(even):hover {
+.resource:nth-child(even):hover {
     background-color: var(--lightPink);
     /* scale: 1.02; */
     border-radius: 30px;
@@ -164,7 +164,7 @@
         font-size: 6vw;
     }
 
-    .splitResources .oneProgram {
+    .splitResources .resource {
         max-width: 95%;
         margin: 15px;
         padding: 5px;
