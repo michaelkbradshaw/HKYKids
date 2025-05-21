@@ -3,7 +3,7 @@
 
 .resource{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     max-width: 350px;
     margin: 25px;
     padding: 20px;
@@ -48,7 +48,7 @@
 {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction:column-reverse;
+    flex-direction:column;
     align-self: flex-start;
 
     margin-left:40px;
