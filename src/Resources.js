@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
-import Resource from "./Resource.js"
+import ResourceSection from "./ResourceSection.js"
 
 
 /* props.data, props.sectionIds, props.headerText*/
@@ -53,18 +53,11 @@ function Resources(props) {
             <Header name={props.headerText} />
             <div class="splitResources">
                 {props.sectionIds.map((id, index) => (
-                    <>
-                        <div className="uniqueTitle"><h2>{uniqueTitles[index]}</h2></div>
-                        <div className = "cardContainer">
-                            {props.data
-                                .filter((item) => item.sectionId === id)
-                                .map((filteredItem) => (
-                                    <Resource activity={filteredItem} updateStorage={updateStorage} />
-
-                                    
-                                    ))}
-                        </div>
-                    </>
+                    <ResourceSection title={uniqueTitles[index]}
+                        updateStorage={updateStorage} 
+                        resources={props.data
+                            .filter((item) => item.sectionId === id)}
+                        />
                 )
                 )}
 
