@@ -1,10 +1,11 @@
 .splitResources {
-    display: flex;
+ /*   display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
+}
 
-    .routerInfo {
+.routerInfo {
         display: flex;
         max-width:90%;
         background: var(--lightBlue);
@@ -71,7 +72,6 @@
 
     }
 
-}
 
 .allLinks button:hover, .bookmarks button:hover {
     scale: 1.02;

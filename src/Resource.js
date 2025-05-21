@@ -17,7 +17,7 @@ function Resource(props) {
                             {filteredItem.links.map((link) => <a href={link.link}><button target="_blank">{link.text}</button></a>)}
                         </span> : null} */}
                     {Object.hasOwn(props.activity, 'description') && props.activity.description != "" ?
-                        <span className="text">
+                        <span className="description">
                             {props.activity.description.map((desc) => (<p>{desc}</p>))}
                         </span> : null}
                     <div className="logoLinks">  

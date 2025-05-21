@@ -10,15 +10,16 @@ function ResourceSection(props) {
 
     
     return (
-        <>
-            <div className="uniqueTitle"><h2>{props.title}</h2></div>
+        <section>
+            {/*<div className="uniqueTitle"><h2>{props.title}</h2></div>*/}
+            <h2>{props.title}</h2>
             <div className = "cardContainer">
             {props.resources
                .map((resource) => (
               <Resource activity={resource} updateStorage={props.updateStorage} />
                 ))}
             </div>
-                    </>
+            </section>
     )
 }
 

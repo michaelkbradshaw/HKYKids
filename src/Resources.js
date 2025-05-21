@@ -9,8 +9,7 @@ import ResourceSection from "./ResourceSection.js"
 function Resources(props) {
 
     let uniqueTitles = []
-    console.log("props.data", props.data);
-
+ 
     const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
     const [ids, setIds] = useState(storedIds)
   
@@ -43,15 +42,10 @@ function Resources(props) {
     }
 }
 
-
-
-    console.log("uniqueTitles", uniqueTitles)
-    console.log("props", props.data)
-
     return (
         <div className="Resources">
             <Header name={props.headerText} />
-            <div class="splitResources">
+            <div classname="content">
                 {props.sectionIds.map((id, index) => (
                     <ResourceSection title={uniqueTitles[index]}
                         updateStorage={updateStorage} 
@@ -60,9 +54,8 @@ function Resources(props) {
                         />
                 )
                 )}
-
             </div>
-        </div>
+            </div>
     );
 
 }
