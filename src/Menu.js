@@ -38,7 +38,7 @@ function Menu(){
             </ul>
 
             <Link to="/support" className="menuSupport">{window.location.pathname === "/support" ? "→ Support" : "Support"}</Link>
-            <Link to="/bookmarks" className="menuBookmarks">{window.location.pathname === "/bookmarks" ? "→ Bookmarks" : "Bookmarks"}</Link>
+            <Link to="/favorites" className="menuBookmarks">{window.location.pathname === "/favorites" ? "→ Favorites" : "Favorites"}</Link>
             <Link to="/donate" className="menuDonate">{window.location.pathname === "/donate" ? "→ Donate" : "Donate"}</Link>
 
 

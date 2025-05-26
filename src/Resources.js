@@ -13,6 +13,7 @@ function Resources(props) {
     const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
     const [ids, setIds] = useState(storedIds)
   
+    console.log("ids",ids)
     useEffect(() => {
         
         localStorage.setItem('ids', JSON.stringify(ids));
@@ -49,6 +50,7 @@ function Resources(props) {
                 {props.sectionIds.map((id, index) => (
                     <ResourceSection title={uniqueTitles[index]}
                         updateStorage={updateStorage} 
+                        ids={ids}
                         resources={props.data
                             .filter((item) => item.sectionId === id)}
                         />

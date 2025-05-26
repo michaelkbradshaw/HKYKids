@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
+import FavoriteButton from './FavoriteButton.js';
 
 
 function Resource(props) {
@@ -24,7 +25,14 @@ function Resource(props) {
                         {<a href={props.activity.links[0].link}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/newPageButton.svg'></img></button></a>}
                     </span> : null}
                     
-                    <span className="bookmarks"><button onClick={() => props.updateStorage(props.activity.gid)}>{<img className = "smallButtonSVG" src = '../imgs/bookmarkButton.svg'></img>}</button></span>
+
+                    <FavoriteButton 
+                        activity={props.activity} 
+                        updateStorage={props.updateStorage} 
+                        isFavorite={props.ids.includes(props.activity.gid)}
+                    />
+
+                    
                     <span className="shareLink">
                         <a href={"#/page/" + props.activity.gid}><button target="_blank">{<img className = "smallButtonSVG" src = '../imgs/infoButton.svg'></img>}</button></a>
                     </span>

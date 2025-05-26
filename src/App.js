@@ -55,7 +55,7 @@ function App() {
 
         <Route path ="/support" element ={<Resources data = {kykidsData} sectionIds = {supportSectionIds} headerText="Support" />} />
 
-        <Route path ="/bookmarks" element ={<Bookmarks data = {kykidsData} headerText="Bookmarks" />} />
+        <Route path ="/favorites" element ={<Bookmarks data = {kykidsData} headerText="Favorites" />} />
 
         <Route path ="/other" element ={<Resources data = {kykidsData} sectionIds = {otherSectionIds} headerText="Other" />} />
         

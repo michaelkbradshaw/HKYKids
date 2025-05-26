@@ -43,7 +43,10 @@ function Bookmarks(props) {
                         {props.data
                             .filter((item) => item.gid === gid)
                             .map((filteredItem) => (
-                                <Resource activity={filteredItem} updateStorage={updateStorage}/>        
+                                <Resource activity={filteredItem} 
+                                    updateStorage={updateStorage}
+                                    ids={ids}
+                                    />        
                             ))}
                     </>
                 )
