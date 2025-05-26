@@ -8,9 +8,9 @@ function Header(props){
     return(
     <div className="Header">
         <div className="menu">{<Menu />}</div>
-        <div className="topBar"> 
-        <a href="/" className="logoLink"><img src="../imgs/HKYKIDSLOGO.png" className='logoImg'/></a>
-        </div>
+        <a href="/" className="logoLink">
+            <img src="../imgs/HKYKIDSLOGO.png" className='logoImg'/>
+        </a>
         <h1>{props.name}</h1>
     </div>
     )

@@ -45,7 +45,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path ="/" element ={<Resources data = {kykidsData} sectionIds = {homeSectionIds} headerText="We believe in putting families first" />} />
+        <Route path ="/" element ={<Resources data = {kykidsData} sectionIds = {homeSectionIds} headerText="Heart of KY Kids" />} />
 
         <Route path ="/activities" element ={<Resources data = {kykidsData} sectionIds = {activitiesSectionIds} headerText="Activities" />} />
 

@@ -10,12 +10,11 @@
     padding-top: 60px;
     transition: 0.5s;
   }
-  .sidenav {
-    right: 0;
-    li {
+  .sidenav li 
+  {
       list-style-type: none;
-    }
   }
+  
   
   
   .sidenav a, .sidenav p {
