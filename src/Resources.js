@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
+import Footer from './Footer.js';
 import ResourceSection from "./ResourceSection.js"
 
 
@@ -46,7 +47,7 @@ function Resources(props) {
     return (
         <div className="Resources">
             <Header name={props.headerText} />
-            <div classname="content">
+            <div className="content">
                 {props.sectionIds.map((id, index) => (
                     <ResourceSection title={uniqueTitles[index]}
                         updateStorage={updateStorage} 
@@ -57,6 +58,7 @@ function Resources(props) {
                 )
                 )}
             </div>
+            <Footer />
             </div>
     );
 

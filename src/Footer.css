@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+ 
+   .footer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    padding-bottom:5%;
+    img {
+      height: 12vw;
+      max-height: 80px;
+      background-image: linear-gradient(45deg, var(--lightPink), var(--lightBlue));
+      border-radius: 50%;
+      transition: 150ms ease-in-out;
+      
+    }
+   }
+ 
+
+ .social img:hover{
+  scale: 1.1;
+}
+
+@media screen and (max-width: 500px){
+  .Header h1 {
+    font-size: 12vw;
+  }
+}
