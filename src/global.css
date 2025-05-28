@@ -1,10 +1,24 @@
 :root{
-    --standardBlack: #07020D;
+   /* --standardBlack: #07020D;
     --white: #ffffff;
     --darkPink: #AA7589;
     --lightPink: #FFC7DC;
     --darkBlue: #427480;
     --lightBlue: #C7F5FF;
     --yellow: #FFFAC7;
-    --sectionText:#AA7589;
+    --logoBlue:#154f81
+*/
+    /*--sectionText:#28262C; rasion*/
+    --sectionText: #4C443C;
+    /*--accentColor1:#E4B4C2;*/
+    --accentColor1:#FFC7DC;
+    /*--accentColor1:#E85D75;*/
+
+    --accentColor2:#A9DEF9;
+    --accentColor3:#AA7589;
+    /*--accentColor3:#D0F4DE;*/
+    --textColor: #07020D;
+    --backgroundColor:white;
+    /*lemon chiffon FCF6BD*/
+    --buttonColor:white;
 }

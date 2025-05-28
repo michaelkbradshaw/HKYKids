@@ -1,7 +1,7 @@
 import React from 'react'; 
 import Menu from './Menu.js';
 import './Header.css';
-
+var ReactFitText = require('react-fittext');
 
 
 function Header(props){
@@ -11,7 +11,10 @@ function Header(props){
         <a href="/" className="logoLink">
             <img src="../imgs/HKYKIDSLOGO.png" className='logoImg'/>
         </a>
-        <h1>{props.name}</h1>
+        <ReactFitText>
+            <h1>{props.name}</h1>
+        </ReactFitText>
+        
     </div>
     )
 }

@@ -6,11 +6,10 @@ import './Footer.css'
 function Footer(props){
     return(
         <footer>
-        <div className="blackLine footer" />
-
+        
         <div className="follow">
             <div className="followText">
-                <h3>Follow Us</h3>
+                Follow Us
             </div>
 
             <div className="social">

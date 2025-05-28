@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link, useParams }
     from "react-router-dom"; import './Resources.css'
 import Header from './Header.js'
 import './RouterPage.css'
+import Footer from './Footer.js'
 
 /* props.data */
 
@@ -35,51 +36,58 @@ function RouterPage(props) {
         gid = ''
     }
     }
-
+    let activity = props.data.filter((item) => item.gid === programId)[0];
+    console.log("activity",activity);
+    if(! activity)
+    {
+        return <h2>loading</h2>
+    }
 
     return (
-        <div className="moreInfoPage">
-         <Header name={props.headerText} />
-            <div className="splitResources">
-                <>
-                <div className="routerInfo">
-                    {props.data
-                        .filter((item) => item.gid === programId)
-                        .map((filteredItem) => (
-                            <>                      
-                            {Object.hasOwn(filteredItem, 'logo') ?
-                                <span className="logo"> <img src={filteredItem.logo} alt={filteredItem.sectionTitle} /> </span>
-                                : null}
+    <>
+        <Header name={activity.title} />
+        <div className="content">
+        <div className="resourceDetails">
+           
+                                          
                             
-                        <span className="allLinks">
+            <span className="allLinks">
                         
-                            <span className="bookmarks"><button onClick={() => UpdateStorage(filteredItem.gid)}>{<img className = "smallButtonSVG" src = '../imgs/bookmarkButton.svg'></img>}</button></span>
+                <span className="bookmarks"><button onClick={() => UpdateStorage(activity.gid)}>{<img className = "smallButtonSVG" src = '../imgs/bookmarkButton.svg'></img>}</button></span>
                          
-                            <span className="backLink">
-                                <a href={"#/page/" + filteredItem.gid}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/arrow-left-solid.svg'></img></button></a>
-                            </span>
+                <span className="backLink">
+                    <a href={"#/page/" + activity.gid}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/arrow-left-solid.svg'></img></button></a>
+                </span>
+            </span>
                             
-                                {Object.hasOwn(filteredItem, 'links') ?
-                                <span className="links">
-                                {filteredItem.links.map((link) => <a href={link.link}><button target="_blank">{link.text}</button></a>)}
-                                </span> : null}
-                            </span>
-                    
-                            {Object.hasOwn(filteredItem, 'description') && filteredItem.description != "" ?
-                                <span className="text">
-                                {filteredItem.description.map((desc) => (<p>{desc}</p>))}
-                                </span> : null}
+            <div className="logoText">
 
-                            </>
-                        ))
-                    }
-                </div>
-                </>
+            {Object.hasOwn(activity, 'logo') ?
+                <span className="logo"> <img src={activity.logo} alt={activity.sectionTitle} /> </span>
+                   : null}
+            
 
+
+            {Object.hasOwn(activity, 'description') && activity.description != "" ?
+                    <span className="text">
+                        {activity.description.map((desc) => (<p>{desc}</p>))}
+                    </span> 
+                    : null}
 
             </div>
-        </div>
 
+            {Object.hasOwn(activity, 'links') ?
+                    <span className="links">
+                        {activity.links.map((link) => <a href={link.link}><button target="_blank">{link.text}</button></a>)}
+                    </span> 
+                    : null}
+
+
+            
+        </div>
+        <Footer />
+        </div>
+    </>
     );
 
 }
