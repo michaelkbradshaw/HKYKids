@@ -14,7 +14,7 @@ function Resources(props) {
     const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
     const [ids, setIds] = useState(storedIds)
   
-    console.log("ids",ids)
+   
     useEffect(() => {
         
         localStorage.setItem('ids', JSON.stringify(ids));
