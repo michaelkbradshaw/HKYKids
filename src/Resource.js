@@ -20,7 +20,11 @@ function Resource(props) {
                 <span className="links">
                 {Object.hasOwn(props.activity, 'links') ?
                     <span className="siteLink">
-                        {<a href={props.activity.links[0].link}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/newPageButton.svg'></img></button></a>}
+                        {<a href={props.activity.links[0].link}>
+                            <button target="_blank">
+                                <img alt="link to offsite resource" className = "smallButtonSVG" src = '../imgs/newPageButton.svg'></img>
+                            </button>
+                        </a>}
                     </span> : null}
                     
 
@@ -32,7 +36,11 @@ function Resource(props) {
 
                     
                     <span className="shareLink">
-                        <a href={"#/page/" + props.activity.gid}><button target="_blank">{<img className = "smallButtonSVG" src = '../imgs/infoButton.svg'></img>}</button></a>
+                        <a href={"#/page/" + props.activity.gid}>
+                            <button target="_blank">
+                                <img alt="details" className = "smallButtonSVG" src = '../imgs/infoButton.svg'></img>
+                            </button>
+                        </a>
                     </span>
                 </span>
             </div>

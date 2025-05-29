@@ -43,6 +43,7 @@ function App() {
 
     useEffect(() => {
         localStorage.setItem('ids', JSON.stringify(ids));
+        console.log(ids);
     }, [ids])
 
     function updateStorage(gid) 

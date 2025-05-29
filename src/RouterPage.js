@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from "react-router-dom"; 
+import { useParams,useNavigate } from "react-router-dom"; 
 import './Resources.css'
 import Header from './Header.js'
 import './RouterPage.css'
@@ -11,13 +11,15 @@ import FavoriteButton from './FavoriteButton.js'
 function RouterPage(props) {
 
     const { programId } = useParams();
-   
+    let navigate = useNavigate();
     let activity = props.data.filter((item) => item.gid === programId)[0];
     
+
     if(! activity)
     {
         return <h2>loading</h2>
     }
+    console.log("details",programId,activity.gid,props.ids)
 
     return (
     <div className="Resources">
@@ -27,14 +29,16 @@ function RouterPage(props) {
            
                                           
                             
-            <span className="links">
-                <span className="siteLink">       
-                    <span className="backLink">
-                        <a href={"#/page/" + activity.gid}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/arrow-left-solid.svg'></img></button></a>
-                    </span>
+        <span className="links">
+            <span className="siteLink">       
+                <span className="backLink">
+                    <button onClick={()=>navigate(-1)}>
+                        <img alt="back" className = "smallButtonSVG" src = '../imgs/arrow-left-solid.svg'></img>
+                    </button>
+                </span>
                 </span>
                 <FavoriteButton 
-                        activity={activity} 
+                        gid={activity.gid} 
                         updateStorage={props.updateStorage} 
                         isFavorite={props.ids.includes(activity.gid)}
                     />
