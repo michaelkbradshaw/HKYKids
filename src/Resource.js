@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import './Resources.css'
-import Header from './Header.js';
+import React from 'react';
 import FavoriteButton from './FavoriteButton.js';
 
 
@@ -27,7 +25,7 @@ function Resource(props) {
                     
 
                     <FavoriteButton 
-                        activity={props.activity} 
+                        gid={props.activity.gid} 
                         updateStorage={props.updateStorage} 
                         isFavorite={props.ids.includes(props.activity.gid)}
                     />
@@ -38,7 +36,7 @@ function Resource(props) {
                     </span>
                 </span>
             </div>
-                    {Object.hasOwn(props.activity, 'description') && props.activity.description != "" ?
+                    {Object.hasOwn(props.activity, 'description') && props.activity.description !== "" ?
                         <span className="description">
                             {props.activity.description.map((desc) => (<p>{desc}</p>))}
                         </span> : null}
@@ -49,7 +47,7 @@ function Resource(props) {
     {
     return (
     <div className="resource onlyText">
-        {Object.hasOwn(props.activity, 'description') && props.activity.description != "" ?
+        {Object.hasOwn(props.activity, 'description') && props.activity.description !== "" ?
         <span className="text">
         {props.activity.description.map((desc) => (<p>{desc}</p>))}
         </span> : null}

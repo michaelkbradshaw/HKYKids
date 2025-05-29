@@ -37,6 +37,24 @@ function App() {
 
   console.log("OTHERIDs", otherSectionIds);
 
+  /*Bookmark Data*/
+  const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
+  const [ids, setIds] = useState(storedIds);
+
+    useEffect(() => {
+        localStorage.setItem('ids', JSON.stringify(ids));
+    }, [ids])
+
+    function updateStorage(gid) 
+    {
+        console.log("ids are?",ids);
+        if (ids.includes(gid)) 
+        {
+            setIds(ids.filter( (id) => {return id !== gid }));
+        }
+        else 
+            { setIds([...ids, gid]); }
+    }
 
 
 
@@ -45,26 +63,49 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path ="/" element ={<Resources data = {kykidsData} sectionIds = {homeSectionIds} headerText="Heart of KY Kids" />} />
+        <Route path ="/" element ={
+            <Resources data = {kykidsData} sectionIds = {homeSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Heart of KY Kids" />} />
 
-        <Route path ="/activities" element ={<Resources data = {kykidsData} sectionIds = {activitiesSectionIds} headerText="Activities" />} />
+        <Route path ="/activities" element ={
+            <Resources data = {kykidsData} sectionIds = {activitiesSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Activities" />} />
 
-        <Route path ="/childcare" element ={<Resources data = {kykidsData} sectionIds = {childcareSectionIds} headerText="Childcare" />} />
+        <Route path ="/childcare" element ={
+            <Resources data = {kykidsData} sectionIds = {childcareSectionIds}
+            ids={ids} updateStorage={updateStorage}
+            headerText="Childcare" />} />
         
-        <Route path ="/preschool" element ={<Resources data = {kykidsData} sectionIds = {preschoolSectionIds} headerText="Preschool" />} />
+        <Route path ="/preschool" element ={
+            <Resources data = {kykidsData} sectionIds = {preschoolSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Preschool" />} />
 
-        <Route path ="/support" element ={<Resources data = {kykidsData} sectionIds = {supportSectionIds} headerText="Support" />} />
+        <Route path ="/support" element ={
+            <Resources data = {kykidsData} sectionIds = {supportSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Support" />} />
 
-        <Route path ="/favorites" element ={<Bookmarks data = {kykidsData} headerText="Favorites" />} />
+        <Route path ="/favorites" element ={
+            <Bookmarks data = {kykidsData} headerText="Favorites" 
+            ids={ids} updateStorage={updateStorage}
+            />} />
 
-        <Route path ="/other" element ={<Resources data = {kykidsData} sectionIds = {otherSectionIds} headerText="Other" />} />
+        <Route path ="/other" element ={
+            <Resources data = {kykidsData} sectionIds = {otherSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Other" />} />
         
-        <Route path ="/donate" element ={<Resources data = {kykidsData} sectionIds = {donateSectionIds} headerText="Donate" />} />
+        <Route path ="/donate" element ={
+            <Resources data = {kykidsData} sectionIds = {donateSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Donate" />} />
 
-        <Route path ="/page/:programId" element = {<RouterPage data = {kykidsData} headerText= "More" />} />
-
-        <Route path ="/test/" element = {<RouterPage data = {kykidsData} />} />
-        
+        <Route path ="/page/:programId" element = {
+            <RouterPage data = {kykidsData} 
+            ids={ids} updateStorage={updateStorage}/>} />
 
         <Route path ="*" element ={<Header name="Page Not Found" />} />
       </Routes>

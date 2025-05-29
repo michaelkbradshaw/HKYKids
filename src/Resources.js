@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Resources.css'
 import Header from './Header.js';
 import Footer from './Footer.js';
 import ResourceSection from "./ResourceSection.js"
 
 
-/* props.data, props.sectionIds, props.headerText*/
+/* props.data, props.sectionIds, props.headerText,props.ids,props.updateStorage*/
 
 function Resources(props) {
 
     let uniqueTitles = []
- 
-    const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
-    const [ids, setIds] = useState(storedIds)
-  
-   
-    useEffect(() => {
-        
-        localStorage.setItem('ids', JSON.stringify(ids));
-        console.log(storedIds);
-    }, [ids])
-
+     
     for (let object of props.data) {
         for (let id of props.sectionIds) {
             if (object.sectionId === id && uniqueTitles.indexOf(object.sectionTitle) === -1) {
@@ -29,29 +19,15 @@ function Resources(props) {
         }
     }
 
-
-  const updateStorage = (gid) => {
-    let exists = false;
-    for (let id of ids) {
-        if (gid == id) {
-            exists = true;
-        }
-    }
-    if (exists == false) {
-        console.log("UPDATE STORAGE RUNNING")
-        setIds([...ids, gid])
-        gid = ''
-    }
-}
-
+    
     return (
         <div className="Resources">
             <Header name={props.headerText} />
             <div className="content">
                 {props.sectionIds.map((id, index) => (
                     <ResourceSection title={uniqueTitles[index]}
-                        updateStorage={updateStorage} 
-                        ids={ids}
+                        updateStorage={props.updateStorage} 
+                        ids={props.ids}
                         resources={props.data
                             .filter((item) => item.sectionId === id)}
                         />

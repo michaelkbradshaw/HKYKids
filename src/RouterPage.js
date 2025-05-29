@@ -1,63 +1,44 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes, Link, useParams }
-    from "react-router-dom"; import './Resources.css'
+import React from 'react'
+import { useParams } from "react-router-dom"; 
+import './Resources.css'
 import Header from './Header.js'
 import './RouterPage.css'
 import Footer from './Footer.js'
+import FavoriteButton from './FavoriteButton.js'
 
-/* props.data */
+/* props.data,props.ids,props.updateStorage */
 
 function RouterPage(props) {
 
     const { programId } = useParams();
-    console.log("ProgramID", programId);
-    
-    console.log("props.data", props.data);
-
-    const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
-    const [ids, setIds] = useState(storedIds)
-  
-    useEffect(() => {
-        
-        localStorage.setItem('ids', JSON.stringify(ids));
-        console.log(storedIds);
-    }, [ids])
-
-  const UpdateStorage = (gid) => {
-    let exists = false;
-    for (let id of ids) {
-        if (gid == id) {
-            exists = true;
-        }
-    }
-    if (exists == false) {
-        console.log("UPDATE STORAGE RUNNING")
-        setIds([...ids, gid])
-        gid = ''
-    }
-    }
+   
     let activity = props.data.filter((item) => item.gid === programId)[0];
-    console.log("activity",activity);
+    
     if(! activity)
     {
         return <h2>loading</h2>
     }
 
     return (
-    <>
+    <div className="Resources">
         <Header name={activity.title} />
         <div className="content">
         <div className="resourceDetails">
            
                                           
                             
-            <span className="allLinks">
-                        
-                <span className="bookmarks"><button onClick={() => UpdateStorage(activity.gid)}>{<img className = "smallButtonSVG" src = '../imgs/bookmarkButton.svg'></img>}</button></span>
-                         
-                <span className="backLink">
-                    <a href={"#/page/" + activity.gid}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/arrow-left-solid.svg'></img></button></a>
+            <span className="links">
+                <span className="siteLink">       
+                    <span className="backLink">
+                        <a href={"#/page/" + activity.gid}><button target="_blank"><img className = "smallButtonSVG" src = '../imgs/arrow-left-solid.svg'></img></button></a>
+                    </span>
                 </span>
+                <FavoriteButton 
+                        activity={activity} 
+                        updateStorage={props.updateStorage} 
+                        isFavorite={props.ids.includes(activity.gid)}
+                    />
+
             </span>
                             
             <div className="logoText">
@@ -68,7 +49,7 @@ function RouterPage(props) {
             
 
 
-            {Object.hasOwn(activity, 'description') && activity.description != "" ?
+            {Object.hasOwn(activity, 'description') && activity.description !== "" ?
                     <span className="text">
                         {activity.description.map((desc) => (<p>{desc}</p>))}
                     </span> 
@@ -87,7 +68,7 @@ function RouterPage(props) {
         </div>
         <Footer />
         </div>
-    </>
+    </div>
     );
 
 }
