@@ -1,8 +1,7 @@
 import React from 'react'
 import { useParams,useNavigate } from "react-router-dom"; 
-import './Resources.css'
 import Header from './Header.js'
-import './RouterPage.css'
+import './ResourceDetail.css'
 import Footer from './Footer.js'
 import FavoriteButton from './FavoriteButton.js'
 

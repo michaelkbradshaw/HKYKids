@@ -3,7 +3,7 @@ import { Route, Routes} from "react-router-dom";
 import Bookmarks from './Bookmarks.js';
 import Resources from './Resources.js';
 import Header from './Header.js';
-import RouterPage from './RouterPage.js';
+import ResourceDetail from './ResourceDetail.js';
 
 
 function App() {
@@ -105,7 +105,7 @@ function App() {
             headerText="Donate" />} />
 
         <Route path ="/page/:programId" element = {
-            <RouterPage data = {kykidsData} 
+            <ResourceDetail data = {kykidsData} 
             ids={ids} updateStorage={updateStorage}/>} />
 
         <Route path ="*" element ={<Header name="Page Not Found" />} />

@@ -1,0 +1,34 @@
+
+
+
+
+@media screen and (max-width: 530px){
+
+    .splitResources {
+        max-width: 95%;
+        margin: 15px;
+        padding: 5px;
+
+        .routerInfo {
+            flex-wrap:wrap;
+            justify-content: center;
+
+           .links {
+                max-width: none;
+                button {
+                    max-width: 125px;
+                }
+            }
+            
+            .text {
+                width: 75%;
+            }
+            img {
+                height: 50vw;
+                width: 50vw;
+            }
+
+        }
+
+    }
+}
