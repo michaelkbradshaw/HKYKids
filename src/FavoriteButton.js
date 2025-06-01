@@ -3,7 +3,6 @@ import React from 'react';
 //props: gid, updateStorage, active
 function FavoriteButton(props)
 {
-    console.log("Fav",props.gid,props.isFavorite)
     return (
 <span className="bookmarks">
     <button className = "smallButtonSVG" onClick={

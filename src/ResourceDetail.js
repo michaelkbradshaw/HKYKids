@@ -7,6 +7,22 @@ import FavoriteButton from './FavoriteButton.js'
 
 /* props.data,props.ids,props.updateStorage */
 
+
+/* Button to get to this page
+
+    <span className="shareLink">
+                        <a href={"#/page/" + props.activity.gid}>
+                            <button target="_blank">
+                                <img alt="details" className = "smallButtonSVG" src = '../imgs/infoButton.svg'></img>
+                            </button>
+                        </a>
+                    </span>
+                
+*/
+
+
+
+
 function RouterPage(props) {
 
     const { programId } = useParams();

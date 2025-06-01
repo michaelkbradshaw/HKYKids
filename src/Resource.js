@@ -1,11 +1,12 @@
 import React from 'react';
 import FavoriteButton from './FavoriteButton.js';
-
+import ShareButton from './ShareButton.js';
 
 function Resource(props) {
 
 
-    if (Object.hasOwn(props.activity, 'links') || Object.hasOwn(props.activity, 'logo') )
+    if (Object.hasOwn(props.activity, 'links') || 
+            Object.hasOwn(props.activity, 'logo') )
     {
         
     return (
@@ -18,38 +19,29 @@ function Resource(props) {
 
 
                 <span className="buttons">
-                {Object.hasOwn(props.activity, 'links') ?
-                    <span className="siteLink">
-                        {<a href={props.activity.links[0].link}>
-                            <button target="_blank">
-                                <img alt="link to offsite resource" className = "smallButtonSVG" src = '../imgs/newPageButton.svg'></img>
-                            </button>
-                        </a>}
-                    </span> : null}
-                    
-
+                
                     <FavoriteButton 
                         gid={props.activity.gid} 
                         updateStorage={props.updateStorage} 
                         isFavorite={props.ids.includes(props.activity.gid)}
                     />
 
-                    
-                    <span className="shareLink">
-                        <a href={"#/page/" + props.activity.gid}>
-                            <button target="_blank">
-                                <img alt="details" className = "smallButtonSVG" src = '../imgs/infoButton.svg'></img>
-                            </button>
-                        </a>
-                    </span>
+                    <ShareButton
+                        activity={props.activity}
+                    />
+
                 </span>
             </div>
+           
+            
+            
+
             {Object.hasOwn(props.activity, 'description') && props.activity.description !== "" ?
                 <span className="description">
                     {props.activity.description.map((desc) => (<p>{desc}</p>))}
                 </span> : null}
-            
-            {Object.hasOwn(props.activity, 'links') ?
+
+                {Object.hasOwn(props.activity, 'links') ?
             <div className="links">
                 {props.activity.links.map(
                     (link) => <a href={link.link}>
@@ -57,7 +49,6 @@ function Resource(props) {
                     </a>)}
             </div> 
             : null}
-
 
         </div>
     )

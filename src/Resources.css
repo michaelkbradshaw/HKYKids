@@ -23,7 +23,10 @@
 
     color: var(--standardBlack);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:larger;
+    text-align:center;
     line-height: 25px;
+    
     padding: 0 3vw;
             /* font-weight: lighter;
             font-size: larger; */
@@ -69,6 +72,7 @@
     border-radius: 20px;
     transition: 150ms ease-in-out;   
     border-width: 1px;
+    font-size:larger;
 }
 
 
@@ -197,7 +201,7 @@ width:90%;
 @media screen and (max-width: 530px){
   
     .uniqueTitle {
-        font-size: 10vw;
+        font-size: 16vw;
         padding: 10% 20px;
         /* padding-top: 10%;
         padding-bottom: 20%; */
