@@ -665,20 +665,5 @@
       ],
       "description": [],
       "phone": "859-236-3565"
-    },
-    {
-      "sectionId": "Other",
-      "sectionTitle": "Misc Section",
-      "gid": "LABC",
-      "logo": "imgs/LABCSquare.png",
-      "title": "Test Other Section",
-      "links": [
-        {
-          "link": "https://www.lexingtonavenuebaptistchurch.org/preschool",
-          "text": "Lexington Avenue Baptist Preschool"
-        }
-      ],
-      "description": [],
-      "phone": "859-236-3565"
     }
   ]

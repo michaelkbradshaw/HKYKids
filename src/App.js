@@ -21,7 +21,8 @@ function App() {
   let allSectionIds = kykidsData.map((object) => object.sectionId)
 
   let homeSectionIds= ["mission", "members"] 
-  let activitiesSectionIds =["programs", "AtHome", "kids-and-parents", "kidAdventures"]
+  let enrolledActivitiesSectionIds =["programs"]
+  let activitiesSectionIds =["AtHome", "kids-and-parents", "kidAdventures"]
   let childcareSectionIds = ["childcare", "poviders"]
   let preschoolSectionIds = ["HeadstartSection", "PublicPreschool", "PrivatePreschool"]
   let supportSectionIds = ["whatToDo", "AddressConcerns", "newParents", "therapy", "caregivers" ]
@@ -68,6 +69,11 @@ function App() {
             <Resources data = {kykidsData} sectionIds = {homeSectionIds} 
             ids={ids} updateStorage={updateStorage}
             headerText="Heart of KY Kids" />} />
+
+        <Route path ="/enroll" element ={
+            <Resources data = {kykidsData} sectionIds = {enrolledActivitiesSectionIds} 
+            ids={ids} updateStorage={updateStorage}
+            headerText="Enroll" />} />
 
         <Route path ="/activities" element ={
             <Resources data = {kykidsData} sectionIds = {activitiesSectionIds} 

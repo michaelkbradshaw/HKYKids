@@ -24,6 +24,7 @@ function Menu(){
     const location = useLocation();
     const pathname = location.pathname;
     
+    
       
     return(
         <>
@@ -32,12 +33,14 @@ function Menu(){
             
             <Link to="/" className="menuHome" onClick={toggleNav}>{pathname === "/" ? "→ Home" : "Home"}</Link>
             
+
+
             <p>Resources</p>
             <ul>
+              <li className="menuEnroll"><Link to="/enroll" onClick={toggleNav}>{pathname === "/enroll" ? "→ Enroll" : "Enroll"} </Link></li>       
               <li className="menuActivities"><Link to="/activities" onClick={toggleNav}>{pathname === "/activities" ? "→ Activities" : "Activities"} </Link></li>
               <li className="menuChildcare"><Link to="/childcare" onClick={toggleNav}>{pathname === "/childcare" ? "→ Childcare" : "Childcare"}</Link></li>
               <li className="menuPreschool"><Link to="/preschool" onClick={toggleNav}>{pathname === "/preschool" ? "→ Preschool" : "Preschool"}</Link></li>
-              <li className="menuOther"><Link to="/other" onClick={toggleNav}>{pathname === "/other" ? "→ Other" : "Other"}</Link></li>
             </ul>
 
             <Link to="/support" className="menuSupport" onClick={toggleNav}>{pathname === "/support" ? "→ Support" : "Support"}</Link>
