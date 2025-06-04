@@ -12,7 +12,6 @@ function App() {
     fetch("kykids.json")
     .then( (data) => data.json())
     .then( (json) => {
-        console.log("response", json);
         setData(json);
 
         
@@ -36,20 +35,16 @@ function App() {
       }
   }
 
-  console.log("OTHERIDs", otherSectionIds);
-
   /*Bookmark Data*/
   const storedIds = JSON.parse(localStorage.getItem('ids')) || [];
   const [ids, setIds] = useState(storedIds);
 
     useEffect(() => {
         localStorage.setItem('ids', JSON.stringify(ids));
-        console.log(ids);
     }, [ids])
 
     function updateStorage(gid) 
     {
-        console.log("ids are?",ids);
         if (ids.includes(gid)) 
         {
             setIds(ids.filter( (id) => {return id !== gid }));

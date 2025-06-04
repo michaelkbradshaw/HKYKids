@@ -8,7 +8,7 @@ function Menu(){
     const [buttonColor, setButtonColor] = useState('#AA7589');
 
     function toggleNav() {
-      console.log(document.getElementById("mySidenav").style);
+      console.log("toggle",document.getElementById("mySidenav").style);
       setButtonColor(buttonColor === '#AA7589' ? '#FFC7DC' : '#AA7589');
       
       if (!document.getElementById("mySidenav").style.width){
@@ -29,20 +29,20 @@ function Menu(){
     return(
         <>
         <div id="mySidenav" className="sidenav">
-            {/* <Link className="closebtn" onClick={toggleNav}>≡</Link> */}
-            
+                        
             <Link to="/" className="menuHome" onClick={toggleNav}>{pathname === "/" ? "→ Home" : "Home"}</Link>
             
-
-
             <p>Resources</p>
             <ul>
-              <li className="menuEnroll"><Link to="/enroll" onClick={toggleNav}>{pathname === "/enroll" ? "→ Enroll" : "Enroll"} </Link></li>       
+              <li className="menuEnroll">
+                <Link to="/enroll" onClick={toggleNav}>
+                  {pathname === "/enroll" ? "→ Enroll" : "Enroll"} 
+                </Link>
+              </li>       
               <li className="menuActivities"><Link to="/activities" onClick={toggleNav}>{pathname === "/activities" ? "→ Activities" : "Activities"} </Link></li>
               <li className="menuChildcare"><Link to="/childcare" onClick={toggleNav}>{pathname === "/childcare" ? "→ Childcare" : "Childcare"}</Link></li>
               <li className="menuPreschool"><Link to="/preschool" onClick={toggleNav}>{pathname === "/preschool" ? "→ Preschool" : "Preschool"}</Link></li>
             </ul>
-
             <Link to="/support" className="menuSupport" onClick={toggleNav}>{pathname === "/support" ? "→ Support" : "Support"}</Link>
             <Link to="/favorites" className="menuBookmarks" onClick={toggleNav}>{pathname === "/favorites" ? "→ Favorites" : "Favorites"}</Link>
             <Link to="/donate" className="menuDonate" onClick={toggleNav}>{pathname === "/donate" ? "→ Donate" : "Donate"}</Link>

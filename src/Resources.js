@@ -19,7 +19,6 @@ function Resources(props) {
         }
     }
 
-    console.log("Resources",props);
     
     return (
         <div className="Resources">

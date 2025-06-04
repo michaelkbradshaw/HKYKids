@@ -15,28 +15,34 @@
     
 }
 
-.fitMe
-{
-  height: 400px;
-  width:100%;
-}
+
 
 .textFitted{
   pointer-events:none;
   z-index: 0;
 }
 
+.vertCenter
+{
+    height: 90%; 
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .Header h1 {
   margin:min(15vw, 60px);
   text-align: center;
-  align-self: center;
+  align-self:center;
   justify-self: center;
+  width:80%;
   
   
   
   color: var(--backgroundColor);
   
-  /*font-size: 160px;*/
+  font-size: min(16vw,140px);
   font-family: "Caveat Brush", cursive;
   font-weight: 400;
   font-style: normal;
