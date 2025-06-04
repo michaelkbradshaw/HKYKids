@@ -30,19 +30,19 @@ function Menu(){
         <div id="mySidenav" className="sidenav">
             {/* <Link className="closebtn" onClick={toggleNav}>≡</Link> */}
             
-            <Link to="/" className="menuHome">{pathname === "/" ? "→ Home" : "Home"}</Link>
+            <Link to="/" className="menuHome" onClick={toggleNav}>{pathname === "/" ? "→ Home" : "Home"}</Link>
             
             <p>Resources</p>
             <ul>
-              <li className="menuActivities"><Link to="/activities">{pathname === "/activities" ? "→ Activities" : "Activities"} </Link></li>
-              <li className="menuChildcare"><Link to="/childcare">{pathname === "/childcare" ? "→ Childcare" : "Childcare"}</Link></li>
-              <li className="menuPreschool"><Link to="/preschool">{pathname === "/preschool" ? "→ Preschool" : "Preschool"}</Link></li>
-              <li className="menuOther"><Link to="/other">{pathname === "/other" ? "→ Other" : "Other"}</Link></li>
+              <li className="menuActivities"><Link to="/activities" onClick={toggleNav}>{pathname === "/activities" ? "→ Activities" : "Activities"} </Link></li>
+              <li className="menuChildcare"><Link to="/childcare" onClick={toggleNav}>{pathname === "/childcare" ? "→ Childcare" : "Childcare"}</Link></li>
+              <li className="menuPreschool"><Link to="/preschool" onClick={toggleNav}>{pathname === "/preschool" ? "→ Preschool" : "Preschool"}</Link></li>
+              <li className="menuOther"><Link to="/other" onClick={toggleNav}>{pathname === "/other" ? "→ Other" : "Other"}</Link></li>
             </ul>
 
-            <Link to="/support" className="menuSupport">{pathname === "/support" ? "→ Support" : "Support"}</Link>
-            <Link to="/favorites" className="menuBookmarks">{pathname === "/favorites" ? "→ Favorites" : "Favorites"}</Link>
-            <Link to="/donate" className="menuDonate">{pathname === "/donate" ? "→ Donate" : "Donate"}</Link>
+            <Link to="/support" className="menuSupport" onClick={toggleNav}>{pathname === "/support" ? "→ Support" : "Support"}</Link>
+            <Link to="/favorites" className="menuBookmarks" onClick={toggleNav}>{pathname === "/favorites" ? "→ Favorites" : "Favorites"}</Link>
+            <Link to="/donate" className="menuDonate" onClick={toggleNav}>{pathname === "/donate" ? "→ Donate" : "Donate"}</Link>
 
 
 
