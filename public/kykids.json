@@ -358,10 +358,6 @@
       ]
     },
     {
-      "sectionId": "poviders",
-      "sectionTitle": "Childcare Providers *coming soon*"
-    },
-    {
       "sectionId": "newParents",
       "sectionTitle": "Programs for New Parents",
       "gid": "KYHands",
@@ -677,5 +673,23 @@
       ],
       "description": [],
       "phone": "859-236-3565"
+    },
+    {
+      "sectionId": "providers",
+      "sectionTitle": "Childcare",
+      "gid": "Childcare",
+      "logo": "imgs/kynectBenefitsLogoRGB.png",
+      "title": "KY Childcare",
+      "links": [
+        {
+          "link": "https://kynect.ky.gov/benefits/s/child-care-provider?",
+          "text": "State registered childcare providers"
+        }
+      ],
+      "description": ["Search for uptodate childcare providers.  Click the link and search by location."]
     }
+
+
+
+    
   ]

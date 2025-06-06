@@ -22,7 +22,7 @@ function App() {
   let homeSectionIds= ["mission", "members"] 
   let enrolledActivitiesSectionIds =["programs"]
   let activitiesSectionIds =["AtHome", "kids-and-parents", "kidAdventures"]
-  let childcareSectionIds = ["childcare", "poviders"]
+  let childcareSectionIds = [ "providers","childcare"]
   let preschoolSectionIds = ["HeadstartSection", "PublicPreschool", "PrivatePreschool"]
   let supportSectionIds = ["whatToDo", "AddressConcerns", "newParents", "therapy", "caregivers" ]
   let donateSectionIds= ["funding"] 
