@@ -13,7 +13,6 @@ function Bookmarks(props) {
     useEffect(() => {
 
         localStorage.setItem('ids', JSON.stringify(ids));
-        console.log(storedIds);
     }, [ids])
 
 

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Resources.css'
-import Header from './Header.js';
 import Resource from "./Resource.js"
 
 
-/* props.title, props.resoruces,props.updateStorage*/
+/* props.title, props.resoruces,props.updateStorage, props.ids*/
 
 function ResourceSection(props) {
 

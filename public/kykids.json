@@ -179,21 +179,33 @@
     {
       "sectionId": "kids-and-parents",
       "sectionTitle": "Programs for Kids and Parents",
-      "gid": "Parks",
-      "logo": "imgs/ParksSbS.png",
+      "gid": "MercerParks",
+      "logo": "imgs/MercerParks.png",
       "title": "Park",
       "links": [
-        {
-          "link": "https://www.danvilleky.org/parks-and-rec",
-          "text": "Danville-Boyle County Parks and Recreation"
-        },
         {
           "link": "https://www.andersondeancommunitypark.com/",
           "text": " Anderson Dean Community Park"
         }
       ],
       "description": [
-        "Playgrounds, parks, pools, and sports teams."
+        "Mercer playgrounds, parks, pools, and sports teams."
+      ]
+    },
+    {
+      "sectionId": "kids-and-parents",
+      "sectionTitle": "Programs for Kids and Parents",
+      "gid": "BoyleParks",
+      "logo": "imgs/BoyleParks.png",
+      "title": "Park",
+      "links": [
+        {
+          "link": "https://www.danvilleky.org/parks-and-rec",
+          "text": "Danville-Boyle County Parks and Recreation"
+        }
+      ],
+      "description": [
+        "Boyle playgrounds, parks, pools, and sports teams."
       ]
     },
     {
