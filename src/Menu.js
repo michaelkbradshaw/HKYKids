@@ -8,7 +8,6 @@ function Menu(){
     const [buttonColor, setButtonColor] = useState('#AA7589');
 
     function toggleNav() {
-      console.log("toggle",document.getElementById("mySidenav").style);
       setButtonColor(buttonColor === '#AA7589' ? '#FFC7DC' : '#AA7589');
       
       if (!document.getElementById("mySidenav").style.width){

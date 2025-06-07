@@ -38,13 +38,14 @@ function Resource(props) {
 
             {Object.hasOwn(props.activity, 'description') && props.activity.description !== "" ?
                 <span className="description">
-                    {props.activity.description.map((desc) => (<p>{desc}</p>))}
+                    {props.activity.description.map((desc,index) => (
+                    <p key={"p"+props.activity.gid+"_"+index}>{desc}</p>))}
                 </span> : null}
 
             {Object.hasOwn(props.activity, 'links') ?
             <div className="links">
                 {props.activity.links.map(
-                    (link) => <a href={link.link}>
+                    (link) => <a key={link.link} href={link.link}>
                         <button target="_blank">{link.text}</button>
                     </a>)}
             </div> 
@@ -65,7 +66,8 @@ function Resource(props) {
     <div className="resource onlyText">
         {Object.hasOwn(props.activity, 'description') && props.activity.description !== "" ?
         <span className="text">
-        {props.activity.description.map((desc) => (<p>{desc}</p>))}
+        {props.activity.description.map((desc,index) => (
+        <p key={"p"+props.activity.gid+"_"+index}>{desc}</p>))}
         </span> : null}
     </div>
     )

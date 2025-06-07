@@ -4,7 +4,6 @@ import './Header.css';
 
 function Header(props)
 {
-    console.log("header",props.headerText)
         return (
         <div className="Header">
             <div className="menu">{<Menu />}</div>

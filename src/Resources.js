@@ -9,7 +9,6 @@ import ResourceSection from "./ResourceSection.js"
 
 function Resources(props) {
 
-    console.log("R h T",props.headerText);
     let uniqueTitles = []
      
     for (let object of props.data) {
@@ -26,7 +25,8 @@ function Resources(props) {
             <Header name={props.headerText} />
             <div className="content">
                 {props.sectionIds.map((id, index) => (
-                    <ResourceSection title={uniqueTitles[index]}
+                    <ResourceSection key={id}
+                        title={uniqueTitles[index]}
                         updateStorage={props.updateStorage} 
                         ids={props.ids}
                         resources={props.data

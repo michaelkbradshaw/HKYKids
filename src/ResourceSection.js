@@ -15,7 +15,9 @@ function ResourceSection(props) {
             <div className = "cardContainer">
             {props.resources
                .map((resource) => (
-              <Resource activity={resource} 
+           
+              <Resource key={resource.gid}
+                    activity={resource} 
                   updateStorage={props.updateStorage} 
                   ids={props.ids}
               />
