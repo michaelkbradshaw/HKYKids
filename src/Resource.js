@@ -1,7 +1,6 @@
 import React from 'react';
 import FavoriteButton from './FavoriteButton.js';
-import ShareButton from './ShareButton.js';
-
+import ResourceLink from './ResourceLink.js';
 function Resource(props) {
 
 
@@ -25,11 +24,6 @@ function Resource(props) {
                         updateStorage={props.updateStorage} 
                         isFavorite={props.ids.includes(props.activity.gid)}
                     />
-
-                    <ShareButton
-                        activity={props.activity}
-                    />
-
                 </span>
             </div>
            
@@ -45,9 +39,11 @@ function Resource(props) {
             {Object.hasOwn(props.activity, 'links') ?
             <div className="links">
                 {props.activity.links.map(
-                    (link) => <a key={link.link} href={link.link}>
-                        <button target="_blank">{link.text}</button>
-                    </a>)}
+                    (link) => 
+                        <ResourceLink 
+                        key={link.link}
+                        activity={props.activity} link={link} />
+                    )}
             </div> 
             : null}
 

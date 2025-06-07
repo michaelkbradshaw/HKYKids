@@ -1,0 +1,11 @@
+.bookmarks .unselected
+{
+    fill:black;
+    stroke:black;
+}
+
+.bookmarks .selected
+{
+    fill:yellow;
+    stroke:black;
+}

@@ -35,7 +35,10 @@ function Bookmarks(props) {
     return (
         <div className="Resources">
             <Header name={props.headerText} />
-            <div class="splitResources">
+            <div className="content">
+            <div className="note">
+                All the activities you starred will be listed here.
+            </div>
             <div className = "cardContainer">
                 {ids.map((gid, index) => (
                     <>

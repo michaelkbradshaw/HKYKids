@@ -1,0 +1,40 @@
+
+.resourceLink
+{
+    display:flex;
+    flex-direction: row;
+    background-color: green;
+    border-radius:15px;
+}
+.linkActions
+{
+    display:flex;
+    align-items: center;
+}
+
+.linkActions button
+{
+    width: 45px;
+    height: 45px;
+    min-width:45px;
+    min-height: 45px;
+    padding: 6px;
+    border-radius: 100%;
+    transition: 150ms ease-in-out;
+    border-width: 1px;
+    align-self: center;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.linkActions svg{
+    padding:6px;
+}
+
+.linkDiv
+{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+
+}
