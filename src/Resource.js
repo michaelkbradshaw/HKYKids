@@ -41,7 +41,7 @@ function Resource(props) {
                     {props.activity.description.map((desc) => (<p>{desc}</p>))}
                 </span> : null}
 
-                {Object.hasOwn(props.activity, 'links') ?
+            {Object.hasOwn(props.activity, 'links') ?
             <div className="links">
                 {props.activity.links.map(
                     (link) => <a href={link.link}>
@@ -49,6 +49,12 @@ function Resource(props) {
                     </a>)}
             </div> 
             : null}
+
+            {Object.hasOwn(props.activity, 'phone') ?
+            <div className="phone">
+                <a href={"tel:"+props.activity.phone}>{props.activity.phone} </a>
+            </div>
+            :null}
 
         </div>
     )
