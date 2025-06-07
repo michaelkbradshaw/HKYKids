@@ -333,8 +333,22 @@
       ]
     },
     {
-      "sectionId": "childcare",
-      "sectionTitle": "High-quality early learning programs",
+      "sectionId": "providers",
+      "sectionTitle": "Childcare",
+      "gid": "Childcare",
+      "logo": "imgs/kynectBenefitsLogoRGB.png",
+      "title": "KY Childcare",
+      "links": [
+        {
+          "link": "https://kynect.ky.gov/benefits/s/child-care-provider?",
+          "text": "State registered childcare providers"
+        }
+      ],
+      "description": ["Search for uptodate childcare providers.  Click the link and search by location."]
+    },    
+    {
+      "sectionId": "childcareHelp",
+      "sectionTitle": "Help with Child Care",
       "gid": "whyChildcare",
       "logo": "imgs/lookFor.png",
       "title": "High-quality early learning programs",
@@ -349,8 +363,8 @@
       ]
     },
     {
-      "sectionId": "childcare",
-      "sectionTitle": "High-quality early learning programs",
+      "sectionId": "childcareHelp",
+      "sectionTitle": "Help with Child Care",
       "gid": "choseChildcare",
       "logo": "imgs/cropped-Child-Care-Aware-of-Kentucky-1.gif",
       "title": "Need help choosing the right care for your child?",
@@ -359,8 +373,8 @@
       ]
     },
     {
-      "sectionId": "childcare",
-      "sectionTitle": "High-quality early learning programs",
+      "sectionId": "childcareHelp",
+      "sectionTitle": "Help with Child Care",
       "gid": "childcareBenefits",
       "logo": "imgs/kynectBenefitsLogoRGB.png",
       "title": "Are you eligible for help covering the cost of childcare?",
@@ -694,23 +708,5 @@
       ],
       "description": [],
       "phone": "859-236-3565"
-    },
-    {
-      "sectionId": "providers",
-      "sectionTitle": "Childcare",
-      "gid": "Childcare",
-      "logo": "imgs/kynectBenefitsLogoRGB.png",
-      "title": "KY Childcare",
-      "links": [
-        {
-          "link": "https://kynect.ky.gov/benefits/s/child-care-provider?",
-          "text": "State registered childcare providers"
-        }
-      ],
-      "description": ["Search for uptodate childcare providers.  Click the link and search by location."]
     }
-
-
-
-    
   ]

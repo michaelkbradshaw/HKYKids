@@ -2,7 +2,6 @@ import React from 'react';
 import './Resources.css'
 import Header from './Header.js';
 import Footer from './Footer.js';
-import ResourceSection from "./ResourceSection.js"
 
 
 /* props.data, props.sectionIds, props.headerText,props.ids,props.updateStorage*/
@@ -75,11 +74,11 @@ function Home(props) {
         <p>Explore preschool options across Boyle and Mercer Counties.</p>
       </div>
       <div className="card">
-        <h3>💛 <a href="/#/suppport">Support</a></h3>
+        <h3>💛 <a href="/#/support">Support</a></h3>
         <p>Access health, nutrition, screenings, and family support services.</p>
       </div>
       <div className="card">
-        <h3>⭐ <a href="/#/favorite">Favorites</a></h3>
+        <h3>⭐ <a href="/#/favorites">Favorites</a></h3>
         <p>Save and access your most-used links in one place.</p>
       </div>
       <div className="card">

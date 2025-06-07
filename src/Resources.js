@@ -9,6 +9,7 @@ import ResourceSection from "./ResourceSection.js"
 
 function Resources(props) {
 
+    console.log("R h T",props.headerText);
     let uniqueTitles = []
      
     for (let object of props.data) {

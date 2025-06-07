@@ -23,7 +23,7 @@ function App() {
   let homeSectionIds= ["mission", "members"] 
   let enrolledActivitiesSectionIds =["programs"]
   let activitiesSectionIds =["AtHome", "kids-and-parents", "kidAdventures"]
-  let childcareSectionIds = [ "providers","childcare"]
+  let childcareSectionIds = ["providers", "childcareHelp"]
   let preschoolSectionIds = ["HeadstartSection", "PublicPreschool", "PrivatePreschool"]
   let supportSectionIds = ["whatToDo", "AddressConcerns", "newParents", "therapy", "caregivers" ]
   let donateSectionIds= ["funding"] 
@@ -68,6 +68,7 @@ function App() {
 */}
         <Route path ="/" element ={
             <Home />} />
+            
         <Route path ="/enroll" element ={
             <Resources data = {kykidsData} sectionIds = {enrolledActivitiesSectionIds} 
             ids={ids} updateStorage={updateStorage}

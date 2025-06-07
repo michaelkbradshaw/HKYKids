@@ -4,6 +4,7 @@ import './Header.css';
 
 function Header(props)
 {
+    console.log("header",props.headerText)
         return (
         <div className="Header">
             <div className="menu">{<Menu />}</div>
@@ -12,7 +13,7 @@ function Header(props)
             </a>
             
             <div className="vertCenter">
-                <h1 >{props.headerText}</h1>
+                <h1 >{props.name}</h1>
             </div>
           
         </div>
