@@ -283,11 +283,32 @@
       "phone": "502-564-4970"
     },
     {
-      "sectionId": "mission",
-      "sectionTitle": "Mission",
+      "sectionId": "welcome",
+      "sectionTitle": "Welcome to HKY Kids",
       "description": [
-        "We aim to ensure the best early care and education so that every child in Boyle and Mercer counties is ready for kindergarten.  We support collaborative community partnerships to implement evidence-based strategies that address local early childhood needs.",
-        "Kindergarten readiness means children enter school with basic skills that will help them learn and play in the classroom. Learn more here!"
+        "Helping young children thrive in Boyle and Mercer Counties"
+      ]
+    },
+    {
+      "sectionId": "mission",
+      "sectionTitle": "Our Mission",
+      "description": [
+        "We’re here to give every child the best possible start in life. HKY Kids supports early childhood success by connecting families and educators with the tools, resources, and partnerships needed to prepare children for kindergarten — and beyond.",
+        "This website is your go-to resource hub for parents and caregivers of young children in Boyle and Mercer Counties. You’ll find trusted links to local programs, educational tools, childcare providers, health services, and more — all in one place."
+      ]
+    },
+    {
+      "sectionId": "ready",
+      "sectionTitle": "What is Kindergarten Readiness?",
+      "description": [
+        "Kindergarten readiness means your child enters school with the basic skills to learn, play, and grow. These include early language, social-emotional, and motor skills that help them thrive in a classroom environment."
+      ]
+    },
+    {
+      "sectionId": "explore",
+      "sectionTitle": "Explore Local Resources",
+      "description": [
+        "Kindergarten readiness means your child enters school with the basic skills to learn, play, and grow. These include early language, social-emotional, and motor skills that help them thrive in a classroom environment."
       ]
     },
     {

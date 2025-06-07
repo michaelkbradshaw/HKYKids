@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+.note
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:3vw;
+    text-align:center;
+    border-radius:30px;
+    background-color: var(--accentColor1);
+    margin:25px;
+    padding:40px;
+}
 
 .resource{
     display: flex;
@@ -61,7 +71,7 @@
     justify-content:center;
 }
 
-.links button 
+.links button
 {
     flex-grow:1;
     background-color: var(--buttonColor);
@@ -98,6 +108,16 @@
     border-radius: 100%;
     transition: 150ms ease-in-out;   
     border-width: 1px;
+}
+
+.card a
+{
+    color:var(--textColor);    
+}
+
+.card a:visited
+{
+    color:var(--textColor);    
 }
 
 
@@ -191,10 +211,12 @@ hr
 width:90%;
 }
 
-.onlyText p
+.onlyText
 {
     line-height:normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:larger;
+    line-height:25px;
     transition: 400ms ease-in-out;        
 }
 

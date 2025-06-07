@@ -10,7 +10,6 @@ function ResourceSection(props) {
     
     return (
         <section>
-            {/*<div className="uniqueTitle"><h2>{props.title}</h2></div>*/}
             <h2>{props.title}</h2>
             <hr />
             <div className = "cardContainer">

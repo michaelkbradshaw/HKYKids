@@ -4,6 +4,7 @@ import Bookmarks from './Bookmarks.js';
 import Resources from './Resources.js';
 import Header from './Header.js';
 import ResourceDetail from './ResourceDetail.js';
+import Home from './Home.js';
 
 
 function App() {
@@ -60,11 +61,13 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path ="/" element ={
+{/*        <Route path ="/" element ={
             <Resources data = {kykidsData} sectionIds = {homeSectionIds} 
             ids={ids} updateStorage={updateStorage}
             headerText="Heart of KY Kids" />} />
-
+*/}
+        <Route path ="/" element ={
+            <Home />} />
         <Route path ="/enroll" element ={
             <Resources data = {kykidsData} sectionIds = {enrolledActivitiesSectionIds} 
             ids={ids} updateStorage={updateStorage}
