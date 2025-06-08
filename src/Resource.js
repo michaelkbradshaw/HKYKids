@@ -48,9 +48,11 @@ function Resource(props) {
             : null}
 
             {Object.hasOwn(props.activity, 'phone') ?
-            <div className="phone">
-                <a href={"tel:"+props.activity.phone}>{props.activity.phone} </a>
-            </div>
+            <a className="phone" href={"tel:"+props.activity.phone}>
+                <div >
+                    {props.activity.phone} 
+                </div>
+            </a>
             :null}
 
         </div>

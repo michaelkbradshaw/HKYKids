@@ -131,11 +131,6 @@ text-decoration:none;
 
 }
 
-.buttons span:first-child button
-{
-    background-color: yellow;
-}
-
 
 .smallButtonSVG 
 {
@@ -146,9 +141,11 @@ text-decoration:none;
     padding: 0;
 }
 
+/*
 .resource:nth-child(even) {
     background-color: var(--accentColor2);
 }
+*/
 
 button:hover {
     scale: 1.01;
@@ -263,4 +260,6 @@ width:90%;
     width: 100%;
 }
 
-
+.homelist li{
+    margin-top:30px;
+}

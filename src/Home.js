@@ -2,13 +2,17 @@ import React from 'react';
 import './Resources.css'
 import Header from './Header.js';
 import Footer from './Footer.js';
-
+import ResourceLink from "./ResourceLink";
 
 /* props.data, props.sectionIds, props.headerText,props.ids,props.updateStorage*/
 
 function Home(props) {
 
-       
+  if(props.data)
+  {
+    var learn=props.data.find((activity)=>activity.gid==="LearnKY");     
+    var learnLink = learn.links.find((link)=>link.text==="Kindergarten Readiness");
+  }
     return (
         <div className="Resources">
             <Header name="Heart of KY Kids!" />
@@ -35,15 +39,17 @@ function Home(props) {
                     <span className="text">
                     <p>
       Kindergarten readiness means your child enters school with the basic skills to learn, play, and grow. These include early language, social-emotional, and motor skills that help them thrive in a classroom environment.
-        </p>
-      <div className="links">
-        <a href="https://www.letslearnky.org/#kindergarten-readiness">
-            <button>Learn more about kindergarten readiness
-            </button>
-        </a>
-      </div>
-    
+                    </p>
                     </span>
+      
+      
+
+      {learn?
+      <ResourceLink activity={learn} link={learnLink} />
+      :null}
+
+    
+                    
                     </div>
                 </section>
                 <section>
@@ -96,7 +102,7 @@ function Home(props) {
                     <p>
       Our collaborative includes a wide range of community partners who care deeply about young children:
     </p>
-    <ul>
+    <ul className="homelist">
       <li><strong>Educators and Early Intervention Experts</strong> from local school districts, Head Start, and First Steps</li>
       <li><strong>Childcare Providers</strong> including ChildCare Aware, Child Care Health, and individual providers</li>
       <li><strong>Public Partners</strong> like UK Cooperative Extension, Health Departments, and Public Libraries</li>
@@ -115,7 +121,7 @@ function Home(props) {
       We’re always looking for new partners and voices in our mission to support young children.
     </p>
     <p>
-      📧 Interested in getting involved? Email us at <a href="mailto:chair@hkykids.org">chair@hkykids.org</a>
+      Interested in getting involved? Email us at <a href="mailto:chair@hkykids.org">chair@hkykids.org</a>
     </p>
                     </span>
                     </div>

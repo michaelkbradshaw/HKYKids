@@ -3,7 +3,7 @@ import './Resources.css'
 import Header from './Header.js';
 import Footer from './Footer.js';
 import ResourceSection from "./ResourceSection.js"
-
+import "./css/Phone.css";
 
 /* props.data, props.sectionIds, props.headerText,props.ids,props.updateStorage*/
 

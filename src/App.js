@@ -67,7 +67,7 @@ function App() {
             headerText="Heart of KY Kids" />} />
 */}
         <Route path ="/" element ={
-            <Home />} />
+            <Home data = {kykidsData}/>} />
             
         <Route path ="/enroll" element ={
             <Resources data = {kykidsData} sectionIds = {enrolledActivitiesSectionIds} 

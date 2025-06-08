@@ -5,10 +5,10 @@ import './css/Menu.css';
 
 function Menu(){
 
-    const [buttonColor, setButtonColor] = useState('#AA7589');
+    const [buttonColor, setButtonColor] = useState("var(--accentColor2)");
 
     function toggleNav() {
-      setButtonColor(buttonColor === '#AA7589' ? '#FFC7DC' : '#AA7589');
+      setButtonColor(buttonColor === "var(--accentText4)" ? 'var(--accentColor2)' : "var(--accentText4)");
       
       if (!document.getElementById("mySidenav").style.width){
         document.getElementById("mySidenav").style.width = "0px";
