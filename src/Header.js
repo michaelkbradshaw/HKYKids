@@ -8,7 +8,7 @@ function Header(props)
         <div className="Header">
             <div className="menu">{<Menu />}</div>
             <a href="/" className="logoLink">
-                <img src="../imgs/HKYKIDSLOGO.png" alt="walking family" className='logoImg'/>
+                <img src="../imgs/HKYKIDSLOGO.png" alt="HKYKids Logo" className='logoImg'/>
             </a>
             
             <div className="vertCenter">
