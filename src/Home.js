@@ -11,7 +11,10 @@ function Home(props) {
   if(props.data)
   {
     var learn=props.data.find((activity)=>activity.gid==="LearnKY");     
-    var learnLink = learn.links.find((link)=>link.text==="Kindergarten Readiness");
+    if(learn)
+    {
+      var learnLink = learn.links.find((link)=>link.text==="Kindergarten Readiness");
+    }
   }
     return (
         <div className="Resources">
@@ -44,7 +47,7 @@ function Home(props) {
       
       
 
-      {learn?
+      {learnLink?
       <ResourceLink activity={learn} link={learnLink} />
       :null}
 
