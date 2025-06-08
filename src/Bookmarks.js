@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Resources.css'
 import Header from './Header.js';
+import Footer from './Footer.js';
 import Resource from './Resource.js'
 
 //data = {kykidsData} sectionGid = {bookmarkGids} headerText="Bookmarks"
@@ -55,6 +56,7 @@ function Bookmarks(props) {
                 )}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 
