@@ -1,6 +1,6 @@
 import React from 'react';
 
-//props: activity
+//props: activity link
 function ShareButton(props)
 {
     function shareResource()
@@ -9,7 +9,7 @@ function ShareButton(props)
         const shareData ={
             title:props.activity.title,
             text:props.activity.description[0],
-            url:props.activity.links[0].link
+            url:props.link
         }
         console.log("shareData",shareData);
         function handleRejected(reason)

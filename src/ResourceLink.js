@@ -20,7 +20,7 @@ function ResourceLink(props) {
                 <CopyButton text={props.link.link} />
 
                 <ShareButton
-                    activity={props.activity}
+                    activity={props.activity} link={props.link.link}
                 />
             </div>
         </div>
